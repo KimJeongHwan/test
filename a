@@ -1,0 +1,22 @@
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900  1) #include<iostream>
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900  2) #include<fstream>
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900  3) #include<cstdlib>
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900  4) #include<ctime>
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900  5) using namespace std;
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900  6) 
+00000000 (Not Committed Yet 2014-04-08 19:55:07 +0900  7) //주석추가함~~
+00000000 (Not Committed Yet 2014-04-08 19:55:07 +0900  8) 
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900  9) int main(void)
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 10) {
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 11) 	ofstream out("output.txt");
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 12) 
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 13) 	srand((unsigned int)time(NULL));	//랜덤함수가 랜덤하게 나오게 하기위해서
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 14) 	char mode[3]={'I','D','M'};
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 15) 
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 16) 	for(int i=0; i<60; i++)	//트랜잭션파일 만들기
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 17) 		out<<mode[rand()%3]<<" "<<time(NULL)+i<<" "<<rand()%20+1<<endl;
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 18) 
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 19) 	out.close();
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 20) 
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 21) 	return 0;
+db854f72 (KimJeongHwan      2014-04-08 19:31:06 +0900 22) }

@@ -4,6 +4,8 @@
 #include<ctime>
 using namespace std;
 
+//주석추가함~~
+
 int main(void)
 {
 	ofstream out("output.txt");
